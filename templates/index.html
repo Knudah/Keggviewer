@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block title %}
+ - Home
+{% endblock %}
+{% block content %}
+    {% with messages = get_flashed_messages() %}
+	    {% if messages %}
+		    <ul class="alert">
+			    <a class="close" data-dismiss="alert">x</a>
+			    {% for message in messages %}
+			    <li>{{ message }}</li>
+			    {% endfor %}
+		    </ul>
+	    {% endif %}
+    {% endwith %}
+<div id="imgpreview">
+    <legend>Select a pathway</legend>
+</div>
+
+{% endblock %}

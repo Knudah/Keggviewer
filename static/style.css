@@ -1,0 +1,55 @@
+html, body {
+    height:100%;
+}
+
+#container {
+    display:block;
+    height:100vh;
+}
+
+#listview {
+    height:100vh;
+    float:left;
+    display:block;
+    width:18%;
+    background-color: green;
+}
+
+ul{
+    height:95%;
+    overflow:hidden;
+    overflow-y:scroll;
+    list-style:none;
+}
+
+#imgpreview {
+    height:100%;
+    display:block;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    select { -webkit-appearance: menulist-button;
+            height:38px;
+    }
+}
+
+.pathname {
+	position: fixed;
+	top: 10px;
+	color:white;
+	font-size:20px;
+}
+
+legend {
+	color: #ffffff;
+	text-align: center;
+}
+
+.alert {
+	margin-top: 50px;
+	margin-bottom: 0px;
+}
+
+.alert li {
+	list-style-type: none;
+}

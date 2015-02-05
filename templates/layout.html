@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>KGML Viewer {% block title%}{% endblock %}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+    <div id="head-wrapper" class ="navbar navbar-fixed-top affix-top navbar-inverse">
+        <div id="head" class="navbar-inner">
+            <div class="container">
+                <p class="pathname"> {{ pathname }} </p>
+                <form method="POST" class="navbar-search pull-right" >
+                    <fieldset>
+                        <form class="search-form">
+                            <div class="input-append">
+                                <div class="btn-group">
+                                    <select name="path">
+                                        {% for p in pathways %}
+                                        <option value="{{ p }}">{{ p }} </option>
+                                        {% endfor %}
+                                    <select name="path">
+                                    <button type="submit" class="btn"> Get pathway </button>
+                                </div>
+                            </div>
+                        </form>
+                    </fieldset>
+                </form>
+            </div><!-- /.container -->
+        </div><!-- /.navbar-inner -->
+    </div><!-- /.navbar -->
+    <div id="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>
